@@ -15,14 +15,14 @@ public class SMSservice {
 
     public void sendSms(String location) {
         // API Key와 Secret Key는 실제로 발급받은 값을 사용해야 합니다.
-        String api_key = "NCSEVJIAGUCKSQGX";
-        String api_secret = "JWOMQZYKJLNRXVTUNDKRBFY8RJKYO8TH";
+        String api_key = "";
+        String api_secret = "";
         Message coolsms = new Message(api_key, api_secret);
         HashMap<String, String> params = new HashMap<>();
 
         // 'from'에는 발신자 번호, 'to'에는 수신자 번호를 입력해야 합니다.
-        params.put("to", "01046708007"); // 수신자 번호
-        params.put("from", "01046627365"); // 발신자 번호
+        params.put("to", ""); // 수신자 번호
+        params.put("from", ""); // 발신자 번호
         params.put("type", "SMS");
         params.put("text", LocalDateTime.now() + "\n"+location + "위치에서 급발진 사건발생"); // 전송할 메시지 내용
         params.put("app_version", "test app 1.2"); // 어플리케이션 버전명 (임의로 설정 가능)
